@@ -1,10 +1,11 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';  // <-- Importar RouterModule
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],  // <-- Importa CommonModule
+  imports: [CommonModule, RouterModule],  // <-- Agregar RouterModule aquí
   templateUrl: './inicio/inicio.component.html',
   styleUrls: ['./inicio/inicio.component.css']
 })
@@ -16,6 +17,6 @@ export class AppComponent {
 
   toggleSidebar() {
     this.sidebarActive = !this.sidebarActive;
-    this.cdr.detectChanges();  // Asegura que Angular refleje el cambio
+    this.cdr.detectChanges();
   }
 }
