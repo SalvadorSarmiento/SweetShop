@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule],  // <-- Importa CommonModule
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './inicio/inicio.component.html',
+  styleUrls: ['./inicio/inicio.component.css']
 })
 export class AppComponent {
   title = 'SweetShop';
