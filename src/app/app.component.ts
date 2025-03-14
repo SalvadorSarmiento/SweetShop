@@ -1,22 +1,15 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';  // <-- Importar RouterModule
+import { RouterModule } from '@angular/router';  //Importamos el RouterModule
+import { FooterComponent } from './footer/footer.component';  // Importamos el Footer
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule],  // <-- Agregar RouterModule aquí
-  templateUrl: './inicio/inicio.component.html',
-  styleUrls: ['./inicio/inicio.component.css']
+  imports: [CommonModule, RouterModule, FooterComponent],  // Agregammos el Footer/RouteR
+  templateUrl: './app.component.html',  // Apuntando al archivo correcto del html donde se encuentran los componentes globalizados
+  styleUrls: ['./app.component.css']//Apuntando al archivo css donde estan los estilados de los componentes globalizados
 })
 export class AppComponent {
   title = 'SweetShop';
-  sidebarActive = true; 
-
-  constructor(private cdr: ChangeDetectorRef) {}
-
-  toggleSidebar() {
-    this.sidebarActive = !this.sidebarActive;
-    this.cdr.detectChanges();
-  }
 }

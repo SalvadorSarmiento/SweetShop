@@ -1,0 +1,9 @@
+.footer {
+    width: 100%;
+    background-color: #3e2723; /* Marrón oscuro */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;/*Fixed por el momento, luego se cambiara a posicional su aparicion en base a interaccion por el usuario*/
+    bottom: 0;
+}
