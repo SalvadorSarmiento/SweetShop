@@ -18,18 +18,25 @@
 
 <section class="products">     
     <div class="product-list">
-        <div class="product" data-category="chocolates">
+        <div class="product" *ngFor="let producto of productos"[attr.data-category]="producto.categoria">
             <img src="/chocolate.png" alt="Chocolate">
-            <h3>Chocolate Deluxe</h3>
+            <h3>{{producto.nombre}}</h3>
             <p>Delicioso chocolate artesanal con almendras.</p>
-            <span class="price">$5.99</span>
+            <span class="price">${{producto.precio}}</span>
             <button class="buy-button">Agregar al carrito</button>
         </div>
-        <div class="product" data-category="dulces">
+        <div class="product" *ngFor="let producto of productos"[attr.data-category]="producto.categoria">
             <img src="/gummy_bears.png" alt="Gomitas">
-            <h3>Gomitas Frutales</h3>
+            <h3>{{producto.nombre}}</h3>
             <p>Gomitas con sabores naturales de frutas.</p>
-            <span class="price">$3.99</span>
+            <span class="price">${{producto.precio}}</span>
+            <button class="buy-button">Agregar al carrito</button>
+        </div>
+        <div class="product" *ngFor="let producto of productos"[attr.data-category]="producto.categoria">
+            <img src="/caramleos_mentosos.png" alt="Caramelos">
+            <h3>{{producto.nombre}}</h3>
+            <p>Caramelos deleitables y refrescantes.</p>
+            <span class="price">${{producto.precio}}</span>
             <button class="buy-button">Agregar al carrito</button>
         </div>
     </div>
