@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';  
-import { HttpClient } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule, RouterModule],  
+  imports: [CommonModule, RouterModule, HttpClientModule], // Asegurar que HttpClientModule está aquí
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
@@ -19,15 +19,12 @@ export class InicioComponent {
   }
 
   cargarProductos() {
-    this.http.get<any[]>('http://localhost:3000/productos').subscribe({
+    this.http.get<any[]>('http://localhost:3001/api/productos').subscribe({
       next: (data) => (this.productos = data),
-      error: (err) => console.error('Error al obtener productos', err),
+      error: (err) => console.error('❌ Error al obtener productos:', err),
     });
   }
+  sanitizeUrl(url: string): string {
+    return url.replace('http://localhost:3001/uploads/http://localhost:3001/uploads/', 'http://localhost:3001/uploads/');
+  }  
 }
-
-
-
-
-
-
