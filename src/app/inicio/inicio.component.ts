@@ -6,7 +6,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule, RouterModule, HttpClientModule], // Asegurar que HttpClientModule está aquí
+  imports: [CommonModule, RouterModule, HttpClientModule], // Añadi CommonModule,RouterModule,HtttpClientModule
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
