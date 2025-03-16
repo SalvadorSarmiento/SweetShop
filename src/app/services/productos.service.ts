@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductosService {
 
-  private apiUrl = 'http://localhost:3000/productos';//Prueba de locacion de URL
+  private apiUrl = 'http://localhost:3001/productos';//Prueba de locacion de URL
 
   constructor(private http: HttpClient) { }
 

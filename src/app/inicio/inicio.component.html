@@ -19,6 +19,7 @@
 <section class="products">     
     <div class="product-list">
         <div class="product" *ngFor="let producto of productos">
+            <img [src]="producto.imagen_url"[alt]="producto.nombre">
             <h3>{{ producto.nombre }}</h3>
             <span class="price">S/{{ producto.precio.toFixed(2) }}</span>
             <button class="buy-button">Agregar al carrito</button>
