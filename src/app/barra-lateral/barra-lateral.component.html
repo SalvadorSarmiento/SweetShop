@@ -1,0 +1,31 @@
+<div class="menu-icon" (click)="toggleSidebar()">
+    &#9776;
+  </div>
+  
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li>
+        <a [routerLink]="['/inicio']">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/catalogo']">
+          <i class="fas fa-candy-cane"></i> Productos
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/ofertas']">
+          <i class="fas fa-shopping-cart"></i> Carrito
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/informacion']">
+          <i class="fas fa-envelope"></i> Contacto
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="overlay" id="overlay" (click)="closeSidebar()"></div>
+  

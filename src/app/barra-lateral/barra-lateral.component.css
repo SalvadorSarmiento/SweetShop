@@ -1,0 +1,87 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5e1c8;
+    color: #5a3e1b;
+}
+
+/* Menú lateral (Sidebar) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px; /* Oculto por defecto */
+    width: 260px;
+    height: 100%;
+    background-color: #b97427;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 1000;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Lista del Sidebar */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #8c5a1e;
+}
+
+/* Enlaces del Sidebar */
+.sidebar ul li a {
+    color: #fff3e0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #8c5a1e;
+    border-radius: 5px;
+}
+
+/* Íconos del Sidebar */
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Botón del menú (Hamburguesa) */
+.menu-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff3e0;
+    background-color: #b97427;
+    padding: 10px 12px;
+    border-radius: 5px;
+    z-index: 1100;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon:hover {
+    background-color: #8c5a1e;
+}
+
+/* Fondo oscuro al abrir el menú */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
