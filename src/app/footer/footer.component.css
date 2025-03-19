@@ -4,6 +4,6 @@
     color: white;
     text-align: center;
     padding: 15px 0;
-    position: fixed;/*Fixed por el momento, luego se cambiara a posicional su aparicion en base a interaccion por el usuario*/
+    position: relative;/*Fixed por el momento, luego se cambiara a posicional su aparicion en base a interaccion por el usuario*/
     bottom: 0;
 }

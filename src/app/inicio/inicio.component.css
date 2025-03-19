@@ -1,51 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
-
-.main {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-}
-
-/* Estilo del header */
-header h1 {
-    font-size: 8rem;
-    font-weight: bold;
-    color: #ffcc00;
-    position: relative;
-    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
-    margin: 15px 0;
-    text-align: center;
-}
-
-header h1::before {
-    content: "SweetShop";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    font-size: 8rem;
-    font-weight: bold;
-    color: transparent;
-    -webkit-text-stroke: 10px #6b2600;
-}
-
-/* Animación de brillo */
-@keyframes glow {
-    0% { text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.3); }
-    50% { text-shadow: 0px 0px 20px rgba(255, 215, 0, 1); }
-    100% { text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.3); }
-}
-
-h1 {
-    font-family: 'Pacifico', cursive;
-    color: #FFD700;
-    text-align: center;
-    font-size: 60px;
-    margin-top: 20px;
-    animation: glow 2s infinite alternate;
-}
-
 /* Barra de navegación */
 .navbar {
     background-color: #D2691E;
@@ -125,19 +77,21 @@ h1 {
 
 /* Sección de Productos */
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si la sección tiene altura */
+    padding: 20px;
 }
 
 .product-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Permite que los productos pasen a la siguiente línea */
+    justify-content: center; /* Centra los productos horizontalmente */
+    gap: 20px; /* Espaciado entre productos */
+    max-width: 1200px; /* Limita el ancho máximo */
+    width: 100%;
 }
+
 
 .product {
     background: rgba(255, 255, 255, 0.9);
