@@ -1,48 +1,89 @@
+/* Configuración general del cuerpo */
 html, body {
-    height: auto;
-    overflow-y: auto; /* Permitir el scroll vertical */
-  }
+  height: auto;
+  overflow-y: auto; /* Permitir el scroll vertical */
+  background: #f8f3e7; /* Fondo crema */
+  font-family: 'Poppins', sans-serif; /* Fuente más moderna */
+}
+/* Barras laterales */
+.sidebar {
+  width: 15%;
+  background: #8B4513; /* Marrón oscuro */
+}
+
+
+/* Sección de información */
 .informacion {
-    background: #f8f3e7; /* Color suave tipo crema */
-    padding: 50px 20px;
-    text-align: center;
+  background: linear-gradient(180deg, #d87c29 0%, #8B4513 100%); /* Degradado marrón-naranja */
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff; /* Texto blanco para contraste */
+  border-radius: 0 0 20px 20px;
+}
+
+/* Contenedor principal */
+.info-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Cuadros de información */
+.info-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  width: 30%;
+  min-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para animación */
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezados dentro de los cuadros */
+.info-box h2 {
+  color: #d87c29; /* Naranja */
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Texto dentro de los cuadros */
+.info-box p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Enlaces dentro de los cuadros */
+.info-box a {
+  color: #d87c29;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
+  color: #8B4513; /* Marrón oscuro al pasar el cursor */
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+  .sidebar {
+      display: none; /* Oculta las barras laterales en móviles */
   }
-  
-  .info-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  .content {
+      width: 100%; /* El contenido ocupa toda la pantalla */
   }
-  
-  .info-box {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    min-width: 280px;
-  }
-  
-  .info-box h2 {
-    color: #d87c29; /* Color naranja del encabezado */
-    margin-bottom: 10px;
-  }
-  
-  .info-box p {
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .info-box a {
-    color: #d87c29;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .info-box a:hover {
-    text-decoration: underline;
-  }
-  
+}
