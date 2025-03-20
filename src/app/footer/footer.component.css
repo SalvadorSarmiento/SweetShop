@@ -1,9 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1; /* Empuja el footer hacia abajo */
+}
+
 .footer {
     width: 100%;
-    background-color: #3e2723; /* Marrón oscuro */
+    background-color: #3e2723;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    position: relative;/*Fixed por el momento, luego se cambiara a posicional su aparicion en base a interaccion por el usuario*/
-    bottom: 0;
+    padding: 20px 0;
 }

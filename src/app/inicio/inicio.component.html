@@ -1,4 +1,7 @@
 <section class="products">     
+    <div class="loader-container" *ngIf="cargando">
+        <span class="loader"></span>
+    </div>
     <div class="product-list">
         <div class="product" *ngFor="let producto of productos">
             <img [src]="sanitizeUrl(producto.imagen)" [alt]="producto.nombre" class="producto-img">
