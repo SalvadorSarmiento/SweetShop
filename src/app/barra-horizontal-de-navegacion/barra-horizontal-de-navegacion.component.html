@@ -7,7 +7,13 @@
     </ul>    
     
     <div class="search-container">
-        <input type="text" class="search-input" placeholder="Buscar productos...">
-        <button class="search-button">🔍</button>
+        <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Buscar productos..." 
+            [(ngModel)]="query"
+            (keyup.enter)="buscar()"
+        >
+        <button class="search-button" (click)="buscar()">🔍</button>
     </div>
-</nav>
+    
