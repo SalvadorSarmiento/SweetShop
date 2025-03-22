@@ -33,6 +33,6 @@ export class BarraHorizontalDeNavegacionComponent implements OnInit {
   }
 
   buscar() {
-    this.productosService.filtrarProductos(this.query);
-  }
+      this.productosService.filtrarProductos(this.query);
+    }; 
 }

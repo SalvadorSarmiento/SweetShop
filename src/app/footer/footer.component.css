@@ -6,7 +6,7 @@ html, body {
 }
 
 .main-content {
-    flex: 1; /* Empuja el footer hacia abajo */
+    flex: 1; /* Ajustar para que ocupe el espacio restante */
 }
 
 .footer {
@@ -15,4 +15,5 @@ html, body {
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-top: auto; /* Asegura que el footer se mantenga abajo */
 }

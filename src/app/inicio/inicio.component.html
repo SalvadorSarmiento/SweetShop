@@ -3,7 +3,7 @@
         <span class="loader"></span>
     </div>
     <div class="product-list">
-        <div class="product" *ngFor="let producto of productos">
+        <div class="product" *ngFor="let producto of productosFiltrados">
             <img [src]="sanitizeUrl(producto.imagen)" [alt]="producto.nombre" class="producto-img">
             <h3>{{ producto.nombre }}</h3>
             <span class="price">S/{{ producto.precio.toFixed(2) }}</span>

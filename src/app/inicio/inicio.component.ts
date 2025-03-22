@@ -49,18 +49,19 @@ export class InicioComponent implements OnInit {
 
 
 buscar() {
-  this.cargando = true; // ✅ Activar el loader durante la búsqueda
+  this.cargando = true; // ✅ Mostrar el loader antes de la búsqueda
 
   setTimeout(() => {
-      if (!this.query.trim()) {
-          this.productosFiltrados = this.productos;
-      } else {
-          this.productosFiltrados = this.productos.filter(producto =>
-              producto.nombre.toLowerCase().includes(this.query.toLowerCase())
-          );
-      }
-      this.cargando = false; // ✅ Ocultar loader después del tiempo de carga
-  }, 1000); // ⏳ Simulación de carga breve de 1 segundo
+    if (!this.query.trim()) {
+      this.productosFiltrados = this.productos;
+    } else {
+      this.productosFiltrados = this.productos.filter(producto =>
+        producto.nombre.toLowerCase().includes(this.query.toLowerCase())
+      );
+    }
+
+    this.cargando = false; // ✅ Ocultar el loader después de la búsqueda
+  }, 100); // ⏳ Simulación de carga breve de 1 segundo
 }
 
 
